@@ -1,0 +1,58 @@
+# github.com/armon/go-metrics v0.0.0-20180917152333-f0300d1749da
+github.com/armon/go-metrics
+# github.com/bradfitz/gomemcache v0.0.0-20190913173617-a41fca850d0b
+github.com/bradfitz/gomemcache/memcache
+# github.com/cenkalti/backoff v0.0.0-20190506075156-2146c9339422
+github.com/cenkalti/backoff
+# github.com/dgrijalva/jwt-go v0.0.0-20190620180102-5e25c22bd5d6
+github.com/dgrijalva/jwt-go
+# github.com/gorilla/mux v0.0.0-20191024121256-f395758b854c
+github.com/gorilla/mux
+# github.com/gorilla/websocket v1.4.1
+github.com/gorilla/websocket
+# github.com/hashicorp/consul/api v1.3.0
+github.com/hashicorp/consul/api
+# github.com/hashicorp/go-cleanhttp v0.5.1
+github.com/hashicorp/go-cleanhttp
+# github.com/hashicorp/go-immutable-radix v1.0.0
+github.com/hashicorp/go-immutable-radix
+# github.com/hashicorp/go-rootcerts v1.0.0
+github.com/hashicorp/go-rootcerts
+# github.com/hashicorp/golang-lru v0.5.0
+github.com/hashicorp/golang-lru/simplelru
+# github.com/hashicorp/serf v0.8.2
+github.com/hashicorp/serf/coordinate
+# github.com/igm/sockjs-go v0.0.0-20190813134216-1a1bca4e69c3
+github.com/igm/sockjs-go/sockjs
+# github.com/juju/ratelimit v0.0.0-20191002062651-f60b32039441
+github.com/juju/ratelimit
+# github.com/koding/cache v0.0.0-20161222233015-e8a81b0b3f20
+github.com/koding/cache
+# github.com/koding/kite v0.0.0-20180710021347-baa1a54919e3
+github.com/koding/kite
+github.com/koding/kite/config
+github.com/koding/kite/dnode
+github.com/koding/kite/kitekey
+github.com/koding/kite/protocol
+github.com/koding/kite/sockjsclient
+github.com/koding/kite/systeminfo
+github.com/koding/kite/utils
+# github.com/koding/logging v0.0.0-20160720134017-8b5a689ed69b
+github.com/koding/logging
+# github.com/mitchellh/go-homedir v1.0.0
+github.com/mitchellh/go-homedir
+# github.com/mitchellh/mapstructure v1.1.2
+github.com/mitchellh/mapstructure
+# github.com/satori/go.uuid v0.0.0-20181028125025-b2ce2384e17b
+github.com/satori/go.uuid
+# golang.org/x/crypto v0.0.0-20191108234033-bd318be0434a
+golang.org/x/crypto/ssh/terminal
+# golang.org/x/sys v0.0.0-20191110163157-d32e6e3b99c4
+golang.org/x/sys/unix
+golang.org/x/sys/windows
+# gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22
+gopkg.in/mgo.v2
+gopkg.in/mgo.v2/bson
+gopkg.in/mgo.v2/internal/sasl
+gopkg.in/mgo.v2/internal/scram
+gopkg.in/mgo.v2/internal/json
