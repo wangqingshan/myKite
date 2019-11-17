@@ -19,15 +19,16 @@ func ConsulRegister() {
 
 	// 创建注册到consul的服务到
 	registration := new(consulapi.AgentServiceRegistration)
-	registration.ID = "111"
-	registration.Name = "go-consul-test"
+	registration.ID = "222"
+	registration.Name = "go-consul-mykite"
 	registration.Port = 3636
-	registration.Tags = []string{"go-consul-test"}
-	registration.Address = "127.0.0.1"
+	registration.Tags = []string{"go-consul-mykite"}
+	registration.Address = "134.175.80.121"
 
 	// 增加consul健康检查回调函数
 	check := new(consulapi.AgentServiceCheck)
-	check.HTTP = fmt.Sprintf("http://%s:%d", registration.Address, registration.Port)
+	//check.HTTP = fmt.Sprintf("http://%s:%d", registration.Address, registration.Port)
+	check.HTTP = fmt.Sprintf("http://%s:%d%s", registration.Address, registration.Port, "/check")
 	check.Timeout = "5s"
 	check.Interval = "5s"
 	check.DeregisterCriticalServiceAfter = "30s" // 故障检查失败30s后 consul自动将注册服务删除
@@ -35,6 +36,9 @@ func ConsulRegister() {
 
 	// 注册服务到consul
 	err = client.Agent().ServiceRegister(registration)
+	if err != nil {
+		log.Fatal("register server error : ", err)
+	}
 }
 
 func TestRegister(t *testing.T) {
