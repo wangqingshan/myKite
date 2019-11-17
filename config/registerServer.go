@@ -5,6 +5,7 @@ import (
 	"fmt"
 	consulapi "github.com/hashicorp/consul/api"
 	"log"
+	"net"
 )
 
 // 注册服务到consul
@@ -21,7 +22,8 @@ func ConsulRegister() {
 	registration := new(consulapi.AgentServiceRegistration)
 	registration.ID = consts.CONSUL_REGISTER_ID
 	registration.Name = consts.CONSUL_REGISTER_NAME
-	registration.Port = 3636
+	registration.Port = 3638
+	//tag可以为空
 	registration.Tags = []string{consts.CONSUL_REGISTER_NAME}
 	registration.Address = "134.175.80.121"
 
@@ -40,4 +42,20 @@ func ConsulRegister() {
 		log.Fatal("register server error : ", err)
 	}
 
+}
+
+//获取本地ip
+func localIP() string {
+	addrs, err := net.InterfaceAddrs()
+	if err != nil {
+		return ""
+	}
+	for _, address := range addrs {
+		if ipnet, ok := address.(*net.IPNet); ok && !ipnet.IP.IsLoopback() {
+			if ipnet.IP.To4() != nil {
+				return ipnet.IP.String()
+			}
+		}
+	}
+	return ""
 }

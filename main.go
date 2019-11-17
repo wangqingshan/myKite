@@ -18,7 +18,7 @@ func main() {
 	}).DisableAuthentication()
 
 	// Attach to a server with port 3636 and run it
-	k.Config.Port = 3636
+	k.Config.Port = 3638
 	//所有的初始化操作都要在Run之前
 	//注册到consul
 	config.ConsulRegister()

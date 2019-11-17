@@ -41,6 +41,30 @@ func ConsulRegister() {
 	}
 }
 
+// 从consul中发现服务
+func ConsulFindServer() {
+	// 创建连接consul服务配置
+	config := consulapi.DefaultConfig()
+	config.Address = "134.175.80.121:8500"
+	client, err := consulapi.NewClient(config)
+	if err != nil {
+		log.Fatal("consul client error : ", err)
+	}
+
+	// 获取所有service
+	services, _ := client.Agent().Services()
+	for _, value := range services {
+		fmt.Println(value.Address)
+		fmt.Println(value.Port, value.ID, value.Service)
+	}
+
+	fmt.Println("=================================")
+	if _, found := services["222"]; found {
+		log.Println("serverNode_1 not found")
+	}
+}
+
 func TestRegister(t *testing.T) {
-	ConsulRegister()
+	//ConsulRegister()
+	ConsulFindServer()
 }
