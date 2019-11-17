@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+
 	// Create a kite
 	k := kite.New("math", "1.0.0")
 
@@ -18,8 +19,10 @@ func main() {
 
 	// Attach to a server with port 3636 and run it
 	k.Config.Port = 3636
-	k.Run()
-
+	//所有的初始化操作都要在Run之前
 	//注册到consul
 	config.ConsulRegister()
+	//服务启动 k.listenAndServe()
+	k.Run()
+
 }

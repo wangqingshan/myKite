@@ -18,10 +18,10 @@ func ConsulRegister() {
 
 	// 创建注册到consul的服务到
 	registration := new(consulapi.AgentServiceRegistration)
-	registration.ID = "111"
-	registration.Name = "go-consul-test"
+	registration.ID = "222"
+	registration.Name = "go-consul-mykite"
 	registration.Port = 3636
-	registration.Tags = []string{"go-consul-test"}
+	registration.Tags = []string{"go-consul-mykite"}
 	registration.Address = "127.0.0.1"
 
 	// 增加consul健康检查回调函数
