@@ -3,6 +3,7 @@ module code.byted.org/baike/mykite
 go 1.12
 
 require (
+	code.byted.org/gopkg/thrift v1.4.6
 	github.com/bradfitz/gomemcache v0.0.0-20190913173617-a41fca850d0b
 	github.com/cenkalti/backoff v0.0.0-20190506075156-2146c9339422 // indirect
 	github.com/dgrijalva/jwt-go v0.0.0-20190620180102-5e25c22bd5d6 // indirect
@@ -18,4 +19,5 @@ require (
 	golang.org/x/crypto v0.0.0-20191108234033-bd318be0434a // indirect
 	golang.org/x/sys v0.0.0-20191110163157-d32e6e3b99c4 // indirect
 	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22 // indirect
+
 )

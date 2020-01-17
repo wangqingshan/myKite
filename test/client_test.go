@@ -12,7 +12,7 @@ func TestGetDocText(t *testing.T) {
 	k := kite.New("exp2", "1.0.0")
 
 	// Connect to our math kite
-	mathWorker := k.NewClient("http://134.175.80.121:3636/kite")
+	mathWorker := k.NewClient("http://134.175.80.121:3638/kite")
 	mathWorker.Dial()
 
 	response, _ := mathWorker.Tell("square", 4) // call "square" method with argument 4

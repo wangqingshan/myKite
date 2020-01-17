@@ -1,3 +1,5 @@
+# code.byted.org/gopkg/thrift v1.4.6
+code.byted.org/gopkg/thrift
 # github.com/armon/go-metrics v0.0.0-20180917152333-f0300d1749da
 github.com/armon/go-metrics
 # github.com/bradfitz/gomemcache v0.0.0-20190913173617-a41fca850d0b
